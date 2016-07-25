@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<div id="container">
+        <div id="header_mid">
+            <div id="top_btnn">
+                <div class="top_btnn2">
+                    <a href="feedback/feedback.aspx">Feedback</a></div>
+                <div class="top_btnn1">
+                    <a href="help/help.aspx">Help</a></div>
+            </div>
+        </div>
+        <div id="header_gap">
+        </div>
+        <div id="midel_container">
+            <div id="header">
+                <div id="logo">
+                    <a href="#">
+                        <img src="images/logo.jpg" alt="logo" width="241" height="58" border="0" /></a>
+						
+				</div>
+                <div id="top_nav">
+                    <div class="arow">
+                        <img src="images/arow.jpg" alt="ar" width="11" height="11" /></div>
+                    <div class="nav2_tittle">
+                        <a href="login/customerlogin.aspx">MyUHCI</a></div>
+                    <div class="strip">
+                    </div>
+                    <div class="arow">
+                        <img src="images/arow.jpg" alt="ar" width="11" height="11" /></div>
+                    <div class="nav3_tittle">
+                        <a href="tools/downloads.aspx">Tools</a></div>
+                    <div class="strip">
+                    </div>
+                    <div class="arow">
+                        <img src="images/arow.jpg" alt="ar" width="11" height="11" /></div>
+                    <div class="nav2_tittle">
+                        <a href="http://careers.unitedhealthgroup.com/" target="_blank">Careers</a></div>
+                    <div class="strip">
+                    </div>
+                    <div class="arow">
+                        <img src="images/arow.jpg" alt="ar" width="11" height="11" /></div>
+                    <div class="nav4_tittle">
+                        <a href="contactus/contactus.aspx">Contact Us</a></div>
+                    <div class="search_tittle">
+                        <a href="#">Search</a></div>
+                    <div class="searchbox">
+                        <!--<input name="" type="text" class="searchboxinput" />-->
+                        <input class="searchboxinput" type="text" id="textsearch" />
+                    </div>
+                </div>
+                <div class="go">
+                    <!--<a href="#">
+                        <img src="images/go.jpg" alt="" border="none;" /></a>-->
+                        <img src="images/go.jpg" border="0" style="cursor:pointer;" onclick="validatesearch();" />
+                </div>
+				<br><br><br><div style="padding-left:550px"><a href="https://www.facebook.com/UHCIndiaHealthyPregnancy" target="_blank"><img src="images/fb_img.png" alt="ar" style="border:0;" /></a></div>	
+            </div>
+			
+	

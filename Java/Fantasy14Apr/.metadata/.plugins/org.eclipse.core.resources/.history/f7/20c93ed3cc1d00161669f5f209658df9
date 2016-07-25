@@ -1,0 +1,29 @@
+import com.ibm.mq.MQC;
+import com.ibm.mq.MQEnvironment;
+import com.ibm.mq.MQException;
+import com.ibm.mq.MQQueue;
+import com.ibm.mq.MQQueueManager;
+import com.ibm.mq.constants.MQConstants;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MQEnvironment.hostname = "192.168.1.19";
+		MQEnvironment.port = 1414;
+		MQEnvironment.channel = "SYSTEM.DEF.SVRCONN";
+		MQQueueManager qmgr = null;
+		MQQueue queue = null;
+		try {
+			qmgr = new MQQueueManager("QM1");
+			int openOptions = MQConstants.MQOO_OUTPUT;
+			queue = qmgr.accessQueue("", openOptions, null, null, null);
+			
+		} catch (MQException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

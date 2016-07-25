@@ -1,0 +1,18 @@
+import com.ibm.mq.MQEnvironment;
+import com.ibm.mq.MQQueue;
+import com.ibm.mq.MQQueueManager;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MQEnvironment.hostname = "192.168.1.19";
+		MQEnvironment.port = 1414;
+		MQEnvironment.channel = "SYSTEM.DEF.SVRCONN";
+		MQQueueManager qmgr = null;
+		MQQueue queue = null;
+		qmgr = new MQQueueManager("QM1");
+		
+	}
+
+}

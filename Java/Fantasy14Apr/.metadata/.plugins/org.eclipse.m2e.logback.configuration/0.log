@@ -1,0 +1,89 @@
+2016-07-12 17:02:04,264 [ModalContext] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2016-07-12 17:02:05,329 [New I/O client worker #1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/maven-metadata.xml
+2016-07-12 17:02:05,333 [New I/O client worker #1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/maven-metadata.xml
+2016-07-12 17:02:21,369 [Worker-3] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' D:\JavaWorkspace\Fantasy14Apr\Bar1\pom.xml
+2016-07-12 17:02:24,888 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Bar:Bar1:0.0.1-SNAPSHOT @ D:\JavaWorkspace\Fantasy14Apr\Bar1\pom.xml.
+2016-07-12 17:02:28,231 [Worker-3] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Bar1/src/main/java
+2016-07-12 17:02:28,266 [Worker-3] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Bar1/src/test/java
+2016-07-12 17:02:28,813 [Worker-3] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Project import completed 7 sec
+2016-07-12 17:02:29,192 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Bar:Bar1:0.0.1-SNAPSHOT @ D:\JavaWorkspace\Fantasy14Apr\Bar1\pom.xml.
+2016-07-12 17:02:30,762 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 17:02:30,763 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 17:02:30,765 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 17:02:30,765 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:21:11,992 [Worker-32] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Bar:Bar1:0.0.1-SNAPSHOT @ D:\JavaWorkspace\Fantasy14Apr\Bar1\pom.xml.
+2016-07-12 19:21:12,026 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.google.zxing:core:jar:1.6-SNAPSHOT is missing, no dependency information available
+2016-07-12 19:21:12,033 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.google.zxing:javase:jar:1.6-SNAPSHOT is missing, no dependency information available
+2016-07-12 19:21:12,207 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:21:12,207 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:21:12,209 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:21:12,209 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:22:30,366 [Worker-32] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Bar:Bar1:0.0.1-SNAPSHOT @ D:\JavaWorkspace\Fantasy14Apr\Bar1\pom.xml.
+2016-07-12 19:22:30,370 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.google.zxing:core:jar:1.6-SNAPSHOT is missing, no dependency information available
+2016-07-12 19:22:30,380 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.google.zxing:javase:jar:1.6-SNAPSHOT is missing, no dependency information available
+2016-07-12 19:22:30,467 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:22:30,468 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:22:30,470 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:22:30,470 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:24:36,221 [Worker-32] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Bar:Bar1:0.0.1-SNAPSHOT @ D:\JavaWorkspace\Fantasy14Apr\Bar1\pom.xml.
+2016-07-12 19:24:36,224 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.google.zxing:core:jar:1.6-SNAPSHOT is missing, no dependency information available
+2016-07-12 19:24:36,230 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.google.zxing:javase:jar:1.6-SNAPSHOT is missing, no dependency information available
+2016-07-12 19:24:36,305 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:24:36,306 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:24:36,308 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:24:36,308 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:24:59,886 [Worker-36] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Bar:Bar1:0.0.1-SNAPSHOT @ D:\JavaWorkspace\Fantasy14Apr\Bar1\pom.xml.
+2016-07-12 19:24:59,912 [Worker-36] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2016-07-12 19:25:00,706 [New I/O client worker #2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/google/zxing/core/1.7/core-1.7.pom
+2016-07-12 19:25:00,707 [New I/O client worker #2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/google/zxing/core/1.7/core-1.7.pom
+2016-07-12 19:25:01,124 [Worker-36] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.google.zxing:javase:jar:1.6-SNAPSHOT is missing, no dependency information available
+2016-07-12 19:25:01,132 [Worker-36] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2016-07-12 19:25:01,730 [New I/O client worker #3-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/google/zxing/core/1.7/core-1.7.jar
+2016-07-12 19:25:04,482 [New I/O client worker #3-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/google/zxing/core/1.7/core-1.7.jar
+2016-07-12 19:25:05,323 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:25:05,323 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:25:05,325 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:25:05,325 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:25:11,793 [Worker-38] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Bar:Bar1:0.0.1-SNAPSHOT @ D:\JavaWorkspace\Fantasy14Apr\Bar1\pom.xml.
+2016-07-12 19:25:11,805 [Worker-38] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2016-07-12 19:25:12,457 [New I/O client worker #4-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/google/zxing/javase/1.7/javase-1.7.pom
+2016-07-12 19:25:12,458 [New I/O client worker #4-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/google/zxing/javase/1.7/javase-1.7.pom
+2016-07-12 19:25:12,829 [Worker-38] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2016-07-12 19:25:13,423 [New I/O client worker #5-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/google/zxing/javase/1.7/javase-1.7.jar
+2016-07-12 19:25:13,728 [New I/O client worker #5-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/google/zxing/javase/1.7/javase-1.7.jar
+2016-07-12 19:25:14,213 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:25:14,213 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:25:14,214 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:25:14,214 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:25:15,427 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:25:15,427 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:25:15,428 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:25:15,429 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:26:08,936 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:26:08,936 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:26:08,938 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:26:08,939 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:26:28,524 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:26:28,530 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:26:28,533 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:26:28,534 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:26:33,721 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:26:33,721 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:26:33,723 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:26:33,723 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:27:37,604 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:27:37,605 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:27:37,607 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:27:37,607 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:29:36,689 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:29:36,690 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:29:36,692 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:29:36,692 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:41:34,191 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:41:34,192 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:41:34,194 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:41:34,194 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources
+2016-07-12 19:55:48,388 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:55:48,389 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\main\resources
+2016-07-12 19:55:48,391 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-07-12 19:55:48,391 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaWorkspace\Fantasy14Apr\Bar1\src\test\resources

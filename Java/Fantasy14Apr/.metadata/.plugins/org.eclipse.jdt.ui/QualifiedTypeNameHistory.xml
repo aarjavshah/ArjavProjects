@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
+<fullyQualifiedTypeName name="com.rje.ams.dao.DBConnection"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
+<fullyQualifiedTypeName name="com.rje.ams.constants.DatabaseConstants"/>
+<fullyQualifiedTypeName name="com.rje.ams.vo.AssetDetailsVO"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.rje.ams.dao.AssetDAO"/>
+<fullyQualifiedTypeName name="com.rje.ams.vo.LendingDetailsVO"/>
+<fullyQualifiedTypeName name="com.rje.ams.dao.LendingDAO"/>
+<fullyQualifiedTypeName name="QMConnectionParmsVO"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilderFactory"/>
+<fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilder"/>
+<fullyQualifiedTypeName name="org.w3c.dom.Document"/>
+<fullyQualifiedTypeName name="com.google.zxing.common.BitMatrix"/>
+<fullyQualifiedTypeName name="com.google.zxing.client.j2se.MatrixToImageWriter"/>
+<fullyQualifiedTypeName name="com.google.zxing.qrcode.QRCodeWriter"/>
+<fullyQualifiedTypeName name="com.google.zxing.BarcodeFormat"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+</qualifiedTypeNameHistroy>

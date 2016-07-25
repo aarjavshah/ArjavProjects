@@ -1,0 +1,24 @@
+package teST1;
+
+class parent{
+	public int i=0;
+	public parent(String x) {
+		// TODO Auto-generated constructor stub
+		i=1;
+	}
+}
+class child extends parent{
+	public int i=0;
+	public child(String x) {
+		// TODO Auto-generated constructor stub
+		super(x);
+	}
+}
+public class Heritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

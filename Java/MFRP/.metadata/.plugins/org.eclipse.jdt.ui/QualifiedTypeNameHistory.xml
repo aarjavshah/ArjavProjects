@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="javax.xml.bind.JAXBContext"/>
+<fullyQualifiedTypeName name="javax.xml.bind.Unmarshaller"/>
+<fullyQualifiedTypeName name="org.example.broker.BrokersTYP"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="org.example.broker.ObjectFactory"/>
+<fullyQualifiedTypeName name="com.sun.tools.xjc.runtime.JAXBContextFactory"/>
+<fullyQualifiedTypeName name="org.example.brokers.BrokersTYP"/>
+<fullyQualifiedTypeName name="org.example.brokers.BrokerTYP"/>
+<fullyQualifiedTypeName name="org.example.brokers.ExecutionGroupTYP"/>
+<fullyQualifiedTypeName name="org.example.brokers.ApplicationTYP"/>
+<fullyQualifiedTypeName name="org.example.brokers.MessageFlowTYP"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContextException"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.util.PropertiesDocGenerator"/>
+<fullyQualifiedTypeName name="org.apache.log4j.PropertyConfigurator"/>
+</qualifiedTypeNameHistroy>

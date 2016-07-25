@@ -1,0 +1,419 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/demo.css" type="text/css">
+    <link href="css/dropdown/themes/default/helper.css" media="screen" rel="stylesheet"
+        type="text/css" />
+    <link href="css/dropdown/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/dropdown/themes/default/default.css" media="screen" rel="stylesheet"
+        type="text/css" />
+        <link rel="stylesheet" href="newsandupdates/colorbox.css" />
+
+    <style type="text/css">
+        *
+        {
+            outline: none;
+            font-family: Verdana;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: normal;
+            color: #222c80;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 10;
+        }
+        .c
+        {
+            clear: both;
+        }
+        #wrapper
+        {
+            margin: 0 auto;
+            padding: 0 40px 60px 40px;
+            width: 960px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+    <script src="js/number_slideshow.js" type="text/javascript"></script>
+    <link href="js/number_slideshow.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript">
+        $(function () {
+            $("#number_slideshow").number_slideshow({
+                slideshow_autoplay: 'enable', //enable disable
+                slideshow_time_interval: '3000',
+                slideshow_window_background_color: "#ccc",
+                slideshow_window_padding: '0',
+                slideshow_window_width: '990',
+                slideshow_window_height: '205',
+                slideshow_border_size: '0',
+                slideshow_border_color: 'black',
+                slideshow_show_button: 'enable', //enable disable
+                slideshow_show_title: 'disable', //enable disable
+                slideshow_button_text_color: '#cd5812',
+                slideshow_button_current_text_color: '#000',
+                slideshow_button_background_color: '#fff',
+                slideshow_button_current_background_color: '#fff',
+                slideshow_button_border_color: '#000',
+                slideshow_loading_gif: '/edit_media/2010/201009/20100913/number-slideshow-new/loading.gif', //loading pic position, you can replace it.
+                slideshow_button_border_size: '0'
+            });
+
+        });
+
+        </script>
+
+           <script src="colorbox/jquery.colorbox.js" type="text/javascript"></script>
+           <script type="text/javascript">
+               $(document).ready(function () {
+                   //Examples of how to assign the ColorBox event to elements
+                   $(".group1").colorbox({ rel: 'group1' });
+                   $(".group2").colorbox({ rel: 'group2', transition: "fade" });
+                   $(".group3").colorbox({ rel: 'group3', transition: "none", width: "75%", height: "75%" });
+                   $(".group4").colorbox({ rel: 'group4', slideshow: true });
+                   $(".ajax").colorbox({ width: "75%", height: "75%" });
+                   $(".youtube").colorbox({ iframe: true, innerWidth: 425, innerHeight: 344 });
+                   $(".iframe").colorbox({ iframe: true, width: "80%", height: "80%" });
+                   $(".inline").colorbox({ inline: true, width: "50%" });
+                   $(".callbacks").colorbox({
+                       onOpen: function () { alert('onOpen: colorbox is about to open'); },
+                       onLoad: function () { alert('onLoad: colorbox has started to load the targeted content'); },
+                       onComplete: function () { alert('onComplete: colorbox has displayed the loaded content'); },
+                       onCleanup: function () { alert('onCleanup: colorbox has begun the close process'); },
+                       onClosed: function () { alert('onClosed: colorbox has completely closed'); }
+                   });
+
+                   //Example of preserving a JavaScript event for inline calls.
+                   $("#click").click(function () {
+                       $('#click').css({ "background-color": "#f00", "color": "#fff", "cursor": "inherit" }).text("Open this window again and this message will still be here.");
+                       return false;
+                   });
+               });
+		</script>
+         <script type="text/javascript">
+             function validatesearch() {
+                 if (document.getElementById("textsearch").value == "" || document.getElementById("textsearch").value == " ") {
+                     alert("Enter Search Word");
+                     return false;
+                 }
+                 location.href = "search/searchresult.aspx?search=" + document.getElementById("textsearch").value;
+             }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="header_mid">
+            <div id="top_btnn">
+                <div class="top_btnn2">
+                    <a href="feedback/feedback.aspx">Feedback</a></div>
+                <div class="top_btnn1">
+                    <a href="help/help.aspx">Help</a></div>
+            </div>
+        </div>
+        <div id="header_gap">
+        </div>
+        <div id="midel_container">
+            <div id="header">
+                <div id="logo">
+                    <a href="#">
+                        <img src="images/logo.jpg" alt="logo" width="241" height="58" border="0" /></a>
+						
+				</div>
+                <div id="top_nav">
+                    <div class="arow">
+                        <img src="images/arow.jpg" alt="ar" width="11" height="11" /></div>
+                    <div class="nav2_tittle">
+                        <a href="login/customerlogin.aspx">MyUHCI</a></div>
+                    <div class="strip">
+                    </div>
+                    <div class="arow">
+                        <img src="images/arow.jpg" alt="ar" width="11" height="11" /></div>
+                    <div class="nav3_tittle">
+                        <a href="tools/downloads.aspx">Tools</a></div>
+                    <div class="strip">
+                    </div>
+                    <div class="arow">
+                        <img src="images/arow.jpg" alt="ar" width="11" height="11" /></div>
+                    <div class="nav2_tittle">
+                        <a href="http://careers.unitedhealthgroup.com/" target="_blank">Careers</a></div>
+                    <div class="strip">
+                    </div>
+                    <div class="arow">
+                        <img src="images/arow.jpg" alt="ar" width="11" height="11" /></div>
+                    <div class="nav4_tittle">
+                        <a href="contactus/contactus.aspx">Contact Us</a></div>
+                    <div class="search_tittle">
+                        <a href="#">Search</a></div>
+                    <div class="searchbox">
+                        <!--<input name="" type="text" class="searchboxinput" />-->
+                        <input class="searchboxinput" type="text" id="textsearch" />
+                    </div>
+                </div>
+                <div class="go">
+                    <!--<a href="#">
+                        <img src="images/go.jpg" alt="" border="none;" /></a>-->
+                        <img src="images/go.jpg" border="0" style="cursor:pointer;" onclick="validatesearch();" />
+                </div>
+				<br><br><br><div style="padding-left:550px"><a href="https://www.facebook.com/UHCIndiaHealthyPregnancy" target="_blank"><img src="images/fb_img.png" alt="ar" style="border:0;" /></a></div>	
+            </div>
+			
+			<!--   <div style="font-size: 24px;font-weight: bold; color: red;"><marquee behavior="alternate"><span style="font-size: 12px;font-weight: bold; color: red;">We are experiencing technical problems with our primary phone lines. Kindly Contact us on 18002098444 or 18002098884 or 022-66660999</span></marquee></div> -->
+      
+            <ul id="nav_menu" class="dropdown">
+                <li class="current" style="width: 100px;"><a href="#">Home</a></li>
+                <li style="width: 130px;"><a href="services/services.aspx">Services</a>
+                    <ul>
+                        <li><a href="services/servicecategories.aspx?v=1">Health and Wellness</a>
+                            <ul>
+                                <li><a href="../Carenine/HPP/hppindex.aspx">Healthy Pregnancy Program</a></li>  
+                                <li><a href="services/servicesprograms.aspx?v=3">Employee Assistance Program</a></li>
+                                <li><a href="services/servicesprograms.aspx?v=4">Health Risk Assessment</a></li>
+                                <li><a href="services/servicesprograms.aspx?v=5">Health Calendar</a></li>
+                                <!--<li><a href="services/servicesprograms.aspx?v=6">Health First</a></li>-->
+                            </ul>
+                        </li>
+                        <li><a href="services/servicecategories.aspx?v=3">Health Check-Ups</a>
+                            <ul>
+                                <li><a href="services/servicesprograms.aspx?v=8">Pre-Policy Medicals</a></li>
+                                <li><a href="services/servicesprograms.aspx?v=9">Corporate Health check-ups</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="services/servicecategories.aspx?v=4">Self-Funded</a></li>
+                    </ul>
+                </li>
+                <li class="dir" style="width: 145px;"><a href="corporates/corporates.aspx">Corporates</a>
+                    <ul>
+                        <li><a href="corporates/employeewelfare.aspx">Employee Welfare</a></li>
+                        <li><a href="corporates/customersatisfaction.aspx">Customer Satisfaction</a></li>
+                        <li><a href="services/servicecategories.aspx?v=1">Health & Wellness Products</a></li>
+                        <li><a href="services/servicecategories.aspx?v=3">Health Check-ups</a></li>
+                        <li><a href="services/servicecategories.aspx?v=4">Self-Funded</a></li>
+                        <li><a href="corporates/ourperformance.aspx">Our Performance</a></li>
+                        <!--<li><a href="corporates/specialoffers.aspx">Special Offers</a></li>
+                        <li><a href="corporates/corporatesevents.aspx">Corporate Events</a></li>
+                        <li><a href="corporates/clientele.aspx">Clientele</a></li>-->
+                    </ul>
+                </li>
+                <li class="dir" style="width: 131px;"><a href="partners/partners.aspx">Partners</a>
+                    <ul>
+                       <!-- <li><a href="#">Our Reach</a></li>-->
+                        <li><a href="partners/insurers.aspx">Insurers</a>
+                            <ul>
+                                <li><a href="partners/insurers_existingrelationship.aspx">Existing Relationship</a></li>
+                                <li><a href="partners/insurers_benefits.aspx">Benefits</a></li>
+                                <!--<li><a href="partners/insurer_empanelmentform.aspx">Empanelment Form</a></li>-->
+                                <!--<li><a href="#">Payment Status</a></li>-->
+                                <!--<li><a href="#">Products</a></li>-->
+                            </ul>
+                        </li>
+                        <li><a href="partners/broker.aspx">Brokers</a>
+                           <!-- <ul>
+                                <li><a href="partners/broker_benefits.aspx">Benefits</a></li>
+                                <li><a href="#">Products</a></li>
+                            </ul>-->
+                        </li>
+                        <li><a href="partners/providers.aspx">Providers</a>
+                            <ul>
+                                <li><a href="partners/currentnetwork.aspx">Current Network</a></li>
+                                <!--<li><a href="contactus/contactus.aspx">Reach Out Form</a></li>-->
+                                <!--<li><a href="partners/providers_empanelmentform.aspx">Empanelment Form</a></li>-->
+                                
+                            </ul>
+                        </li>
+                        <!--<li><a href="partners/employers.aspx">Employers</a></li>-->
+                        <!--<li><a href="partners/others.aspx">Others</a>
+                            <ul>
+                                <li><a href="partners/affinitypartners.aspx">Affinity Partners</a></li>
+                                <li><a href="partners/telecom.aspx">Telecom</a></li>
+                                <li><a href="partners/psu.aspx">PSU</a></li>
+                            </ul>
+                        </li>-->
+                    </ul>
+                </li>
+                <li style="width: 151px;"><a href="aboutuhci/aboutus.aspx">About UHCI</a>
+                    <ul>
+                        <li><a href="aboutuhci/mission.aspx">Mission & Values</a></li>
+                       <!-- <li><a href="aboutuhci/management.aspx">Management</a></li>-->
+                        <li><a href="aboutuhci/testimonials.aspx">Testimonials</a></li>
+                       <!-- <li><a href="aboutuhci/performance.aspx">Performance</a></li>-->
+                        <li><a href="aboutuhci/socialinitiative.aspx">Social Initiatives</a></li>
+                    </ul>
+                </li>
+                <li style="width: 126px;"><a href="whyus/whyus.aspx">Why Us?</a>
+                    <ul>
+                        <li><a href="whyus/ourpromise.aspx">Our Promise</a></li>
+                        <li><a href="whyus/ourpillars.aspx">Our Pillars & Strength</a></li>
+                        <li><a href="whyus/capabilities.aspx">Capabilities</a></li>
+                        <li><a href="whyus/casestudy.aspx">Case Study</a></li>
+                    </ul>
+                </li>
+                <li style="width: 188px;"><a href="newsandevents/newsandevents.aspx">News and Events</a>
+            </ul>
+            <div id="number_slideshow" class="number_slideshow">
+                <ul style="margin: 0px">
+                    <li style="display: none;"><a href="#">
+                        <img src="images/uhci_990x205_1.jpg" alt="slideshow1" border="0" usemap="#Map">
+                        <map name="Map" id="Map">
+                            <area shape="rect" coords="46,61,111,76" href="services/servicesprograms.aspx?v=9" />
+                        </map>
+                    </a></li>
+                    <li style="display: none;"><a href="#">
+                        <img src="images/uhci_990x205_2.jpg" alt="slideshow2" border="0" usemap="#Map2">
+                        <map name="Map2" id="Map2">
+                            <area shape="rect" coords="47,61,111,79" href="services/servicesprograms.aspx?v=4" />
+                        </map>
+                    </a></li>
+                    <li style="display: none;"><a href="#">
+                        <img src="images/uhci_990x205_3.jpg" alt="slideshow3" border="0" usemap="#Map3">
+                        <map name="Map3" id="Map3">
+                            <area shape="rect" coords="120,74,161,91" href="services/servicecategories.aspx?v=3" />
+                        </map>
+                    </a></li>
+                    <li style="display: none;"><a href="#">
+                        <img src="images/uhci_990x205_4.jpg" alt="slideshow4" border="0" usemap="#Map4">
+                        <map name="Map4" id="Map4">
+                            <area shape="rect" coords="611,103,699,121" href="services/servicesprograms.aspx?v=6" />
+                        </map>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/uhci_990x205_5.jpg" alt="slideshow4" border="0" usemap="#Map5">
+                        <map name="Map5" id="Map5">
+                            <area shape="rect" coords="351,63,410,81" href="services/servicesprograms.aspx?v=3" />
+                        </map>
+                    </a></li>
+                </ul>
+                <ul class="number_slideshow_nav">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+                <div style="clear: both">
+                </div>
+            </div>
+            <div id="main">
+                <div id="left_sidebar">
+                    <div id="sidebar_content">
+                        <div id="content">
+                            <h1>
+                                He sacrifices his health in order to make money. Then he sacrifices money to recuperate
+                                his health.<span class="lama"> - The Dalai Lama</span></h1>
+                        </div>
+                        <div id="content_2">In our quest to put our families first and provide world-class comforts to our loved ones, we have sadly been putting our health and well-being on the backburner. At UnitedHealthcare, we understand that we live in a fast-paced and highly competitive world. And that is why we choose to take a different approach to health care. All our products and services are developed keeping you in mind.<br />
+<br />
+Since 1996, we have brought forth innovative programs that provide only the best health care for you and your family. Today, standing by our principle of offering outstanding service and plans for people at all life stages, UnitedHealthcare has grown into one of India&rsquo;s best health and wellness service provider in health insurance sector.<br />
+<br />
+Take a tour of this website to see how we help <a href="Login/customerlogin.aspx?md=individuals">individuals</a>, <a href="corporates/corporates.aspx">corporates</a>, <a href="Partners/insurers.aspx">insurers</a>, <a href="Partners/broker.aspx">brokers</a> and <a href="Partners/providers.aspx">health providers</a> manage healthcare requirements.<br />
+&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+                    </div>
+                </div>
+                <div id="right_sidebar">
+                    <div id="featured">
+                        News and Updates</div>
+                    <div id="date">
+                        <div class="date">
+                            <div class="date1">
+                                <!--<div class="dott">
+                                </div>-->
+                                <div class="dott_text" id='projectlinks' >
+                                    <marquee behavior="scroll" direction="up" scrollamount="1" id="mymarquee" onmouseover="this.setAttribute('scrollamount', 0, 0);" onmouseout="this.setAttribute('scrollamount', 1, 0);" style="height:68px;width:98%">
+                                    <a href='Newsandevents/newsandevents.aspx' style='color:#222c80;'>Raheja QBE chooses UHCI for pre policy medicals</a><br /><br /><a href='Newsandevents/newsandevents.aspx' style='color:#222c80;'>UHCI participates in HCL Carnival</a><br /><br /><a href='Newsandevents/newsandevents.aspx' style='color:#222c80;'>UHCI ties up with ICICI Prudential to provide medical tests to its corporate clients</a><br /><br /><a href='Newsandevents/newsandevents.aspx' style='color:#222c80;'>UHCI ties up with Religare Health Insurance Limited to offer pre-policy medical check up appointment scheduling.</a><br /><br /><a href='Newsandevents/newsandevents.aspx' style='color:#222c80;'>UHCI successfully conducts annual health check up for the employees of Bharti Axa General Insurance Company Limited.</a><br /><br /><a href='Newsandevents/newsandevents.aspx' style='color:#222c80;'>UHCI launches UnitedHealthcare Healthy Pregnancy Program on July 2, 2012.</a><br /><br /><a href='Newsandevents/newsandevents.aspx' style='color:#222c80;'>UHCI ties up with Hindustan Coco Cola to provide annual health check up and pre –employment medical program.</a><br /><br /><a href='Newsandevents/newsandevents.aspx' style='color:#222c80;'>UHCI partners with "Make a wish" foundation to bring joy and happiness to little kids</a><br /><br />
+                                    </marquee>
+                                </div>
+                                <!--<div class="arrow">
+                              <img src="images/arrow.jpg" width="12" height="56" border="0" />
+</div>-->
+                          </div>
+                        </div>
+                    </div>
+                    <div id="featured_pro">
+                        Featured Products and Services</div>
+                    <div id="pro_text">
+                        <div class="pro1">
+<div class="pro_tittle">Healthy Pregnancy Program</div>
+<div class="pro_img"><img alt="" srr="images/diabbetise.jpg" src="images/diabbetise.jpg" /></div>
+<div class="pro_imgtext">Our one-of-a-kind program has benefited many expecting mothers.<br />
+<span class="check"><a href="services/servicesprograms.aspx?v=7">Read more</a></span></div>
+<!--<span class="check"><a href="https://www.uhcindia.com/Healthy-Pregnancy/html/index.aspx">Read more</a></span></div>--></div>
+<div class="pro2">
+<div class="pro_tittle2">Health First</div>
+<div class="pro_img1"><img alt="" src="images/health.jpg" /></div>
+<div class="pro_imgtext1">Take profile tests at a discounted rate and be at peace.<br />
+<span class="check"><a href="services/servicesprograms.aspx?v=6">Read More</a></span></div>
+</div>
+<div id="line">&nbsp;</div>
+<div class="pro1">
+<div class="pro_tittle">Health Checkup</div>
+<div class="pro_img"><img alt="" srr="images/smart.jpg" src="images/samrt.jpg" /></div>
+<div class="pro_imgtext">Corporate or insurers, do you need to assess your medical risks? <br />
+Check out our<br />
+<span class="check"><a href="services/servicecategories.aspx?v=3">Read More</a></span></div>
+</div>
+<div class="pro2">
+<div class="pro_tittle2">Self Funded</div>
+<div class="pro_img1"><img alt="" src="images/united_heath.jpg" /></div>
+<div class="pro_imgtext1">Are you a corporate wanting to run your own health program? Opt for our Self-Funded initiative. <br />
+<span class="check"><a href="services/servicecategories.aspx?v=4">Read more</a></span></div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="header_btm_gap">
+        </div>
+    </div>
+    <div class="textabovefooter">
+    <div class="textabovefooter_text">Helping People Live Healthier Lives</div>
+    </div>
+    <div id="footer">
+        <div class="footer_conten">
+            UnitedHealthcare is a registered service mark of UnitedHealthcare, Inc. The UnitedHealthcare
+            name with the dimensional logo, as well as the dimensional logo alone, are both
+            service marks of UnitedHealthcare. Inc.</div>
+        <div class="footer_conten2">
+            <div id="bottum_btnn">
+                <div class="bottum_btnn1">
+                    <a href="termsofuse.htm" class="ajax">Legal</a></div>
+                <div class="bottum_btnn2">
+                    <a href="privacypolicy.htm" class="ajax">Privacy Policy</a></div>
+                <div class="bottum_btnn4">
+                    <a href="disclaimer.html" class='ajax'>Disclaimer</a></div>
+				<div class="bottum_btnn2">
+                    <a href="PaymentTerms.html" style="width:30px;" class='ajax'>Payment Terms</a></div>
+	            </div>
+				<div class="bottum_btnn2">
+                    <a href="RefundPolicy.html" class='ajax'>Refund Policy</a></div>
+				<div class="bottum_btnn3">
+                    <a href="sitemap/sitemap.aspx">Site Map</a></div>
+	            </div>
+				
+            <div id="copy_rt">
+                © 2013 UnitedHealthcare, All rights reserved.</div>
+        </div>
+    </div>
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40946883-1', 'uhcindia.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

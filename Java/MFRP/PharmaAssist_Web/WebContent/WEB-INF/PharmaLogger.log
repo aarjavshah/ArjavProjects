@@ -1,0 +1,257 @@
+INFO http-8080-5 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-5 com.cts.pharma.controller.UserLoginController - User 454582 logged in
+INFO http-8080-5 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-5 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-5 com.cts.pharma.dao.BatchDAO - Batch BTC-1111 was searched
+INFO http-8080-5 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-5 com.cts.pharma.controller.UserLoginController - User 454579 logged in
+INFO http-8080-7 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-7 com.cts.pharma.controller.UserLoginController - User 454582 logged in
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - Batch FBV-1193 was searched
+INFO http-8080-7 com.cts.pharma.dao.UserDAO - User 454582 Logging out
+INFO http-8080-5 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-5 com.cts.pharma.controller.UserLoginController - User 454591 logged in
+INFO http-8080-5 com.cts.pharma.dao.BatchDAO - GetMedicineCode Query Execution
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - setting values for getshiiping charge query
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - GetshippingCharges Query Execution
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - setting values for getshiiping charge query
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - GetshippingCharges Query Execution
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Setting the values for insert query
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - in addDetails() SQL Exception
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Batchcode Conflict
+INFO http-8080-4 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-4 com.cts.pharma.controller.UserLoginController - User 454582 logged in
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch FBV-1193 was searched
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Update Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Update Query Execution
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch FBV-1193 updated
+INFO http-8080-3 com.cts.pharma.dao.UserDAO - User 454582 Logging out
+INFO http-8080-9 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-9 com.cts.pharma.controller.UserLoginController - User 454579 logged in
+INFO http-8080-4 com.cts.pharma.dao.UserDAO - User 454579 Logging out
+INFO http-8080-4 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-4 com.cts.pharma.controller.UserLoginController - User 454579 logged in
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Batch BAT-7123 was searched
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - In Update Function
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Update Query Execution
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Batch BAT-7123 updated
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Batch BTC-1111 was searched
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Batch FBV-1193 was searched
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - In Update Function
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Update Query Execution
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Batch FBV-1193 updated
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Batch BAT-7123 was searched
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Batch BTC-1111 was searched
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - In Update Function
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Update Query Execution
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Batch BTC-1111 updated
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Batch FBV-1193 was searched
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - In Update Function
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Update Query Execution
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Batch FBV-1193 updated
+INFO http-8080-5 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-5 com.cts.pharma.controller.UserLoginController - User 454582 logged in
+INFO http-8080-2 com.cts.pharma.dao.UserDAO - User 454582 Logging out
+INFO http-8080-3 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-3 com.cts.pharma.controller.UserLoginController - User 454582 logged in
+INFO http-8080-2 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-6 com.cts.pharma.dao.UserDAO - User 454582 Logging out
+INFO http-8080-3 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-3 com.cts.pharma.controller.UserLoginController - User 454582 logged in
+INFO http-8080-3 com.cts.pharma.dao.UserDAO - User 454582 Logging out
+INFO http-8080-4 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-4 com.cts.pharma.controller.UserLoginController - User 454580 logged in
+INFO http-8080-1 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-1 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-1 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-1 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-1 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-1 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-1 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-1 com.cts.pharma.dao.BatchDAO - Batch BAT-7123 was searched
+INFO http-8080-1 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-1 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-1 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-3 com.cts.pharma.dao.UserDAO - User 454580 Logging out
+INFO http-8080-5 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-5 com.cts.pharma.controller.UserLoginController - User 454580 logged in
+INFO http-8080-5 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-6 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-6 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-6 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-6 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-6 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-6 com.cts.pharma.dao.BatchDAO - Batch BAT-7123 was searched
+INFO http-8080-6 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-6 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-6 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-6 com.cts.pharma.dao.UserDAO - User 454580 Logging out
+INFO http-8080-6 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-6 com.cts.pharma.controller.UserLoginController - User 454580 logged in
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-8 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-7 com.cts.pharma.dao.UserDAO - User 454580 Logging out
+INFO http-8080-4 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-4 com.cts.pharma.controller.UserLoginController - User 454580 logged in
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - Batch BAT-7123 was searched
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-7 com.cts.pharma.dao.UserDAO - User 454580 Logging out
+INFO http-8080-8 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-8 com.cts.pharma.controller.UserLoginController - User 454579 logged in
+INFO http-8080-7 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In add batch function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - AddBatch Query Execution
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch BTC-1119 added
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch BTC-1119 was searched
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Update Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Update Query Execution
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch BTC-1119 updated
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Delete Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch BTC-1119 deleted
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch SAS-3213 was searched
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch SAS-3213 was searched
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-7 com.cts.pharma.dao.UserDAO - User 454579 Logging out
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-4 com.cts.pharma.dao.BatchDAO - Batch null was searched
+INFO http-8080-3 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-3 com.cts.pharma.controller.UserLoginController - User 454582 logged in
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch GFD-6431 was searched
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch BTC-1111 was searched
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Update Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Update Query Execution
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch BTC-1111 updated
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Delete Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch BTC-111 deleted
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch SAS-3213 was searched
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Calculating shippingCharges
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Update Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - in updateDetails() SQL Exception
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batchcode Conflict
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - validating BatchCode
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - In Search Function
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Retrieving the values from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Setting the BatchVO
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Batch FBV-1193 was searched
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting MedicineCode from database
+INFO http-8080-3 com.cts.pharma.dao.BatchDAO - Getting BatchCodes from database
+INFO http-8080-8 com.cts.pharma.dao.UserDAO - User 454582 Logging out
+INFO http-8080-3 com.cts.pharma.logger.LoggerInitializer - Application Initialized
+INFO http-8080-3 com.cts.pharma.controller.UserLoginController - User 454579 logged in
+INFO http-8080-3 com.cts.pharma.dao.UserDAO - User 454579 Logging out

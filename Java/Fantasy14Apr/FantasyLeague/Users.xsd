@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Users" xmlns:tns="http://www.example.org/Users" elementFormDefault="qualified">
+
+    <element name="UserID" type="decimal"></element>
+
+    <element name="Name" type="string"></element>
+
+
+    <element name="Password" type="string"></element>
+
+    <element name="Email" type="string"></element>
+
+    <element name="FinalPoint" type="decimal"></element>
+    
+    <element name="CurRank" type="decimal"></element>
+    
+    <element name="PreviousRank" type="decimal"></element>
+
+    
+
+
+
+    <element name="User" type="tns:UserTYP"></element>
+    
+    <element name="UserInfo" type="tns:UserInfoTYP"></element>
+    
+    <element name="ContestDetails" type="tns:ContestDetailsTYP"></element>
+    
+    <complexType name="ContestDetailsTYP">
+    	<sequence>
+    		<element ref="tns:FinalPoint"></element>
+    		<element ref="tns:CurRank"></element>
+    		<element ref="tns:PreviousRank"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="UserTYP">
+    	<sequence>
+    		<element ref="tns:UserInfo"></element>
+    		<element ref="tns:ContestDetails"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="UsersTYP">
+    	<sequence>
+    		<element ref="tns:User" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="UserInfoTYP">
+    	<sequence>
+    		<element ref="tns:UserID"></element>
+    		<element ref="tns:Name"></element>
+    		<element ref="tns:Password"></element>
+    		<element ref="tns:Email"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="Users" type="tns:UsersTYP"></element>
+</schema>

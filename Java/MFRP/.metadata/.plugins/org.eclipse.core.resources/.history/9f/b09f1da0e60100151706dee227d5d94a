@@ -1,0 +1,22 @@
+package teST1;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*String a="newspaper";
+		a=a.substring(5, 7);
+		char b=a.charAt(1);
+		a=a+b;
+		System.out.println(a);*/
+		//int x= Integer.parseInt("123$");
+		Main main=new Main();
+		int j= main.pupAge();
+		System.out.println(j);
+	}
+public int pupAge(){
+	static int i=0;
+	i++;
+	return i;
+}
+}
