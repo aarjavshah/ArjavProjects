@@ -1,0 +1,119 @@
+
+
+
+
+
+
+CREATE COMPUTE MODULE AutoTest_MF_checkMessage
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		--{"Flows":[{"FlowType":"HH","FlowIn":"http://localhost:7800/lkj","FlowOut":"QOUT","QmName":"QM2","FlowName":"Flow1","Latency":"5"},{"FlowType":"QQ","FlowIn":"Q2","FlowOut":"QOUT","QmName":"QM2","FlowName":"FT","Latency":"5"}]}
+		CALL CopyMessageHeaders();
+		SET Environment.In =  InputRoot;
+		SET OutputRoot.JSON.Data.Response.Status = 'Request Recieved';
+		PROPAGATE TO TERMINAL 'out1' DELETE NONE;
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+	-- CREATE PROCEDURE CopyEntireMessage() BEGIN
+	-- SET OutputRoot = Environment.msg;
+	-- END;
+END MODULE;
+
+
+
+
+CREATE COMPUTE MODULE AutoTest_MF_RouteToDest
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE outTerminal CHARACTER;
+		IF Environment.Variables.FlowType = 'QQ' THEN
+			SET outTerminal = 'out';
+			CALL setMQHeaders();
+		ELSEIF Environment.Variables.FlowType = 'HH' THEN
+			SET outTerminal = 'out1';
+			CALL setHTTPHeades();
+		ELSEIF Environment.Variables.FlowType = 'FF' THEN
+			SET outTerminal = 'out2';
+			CALL setFileHeaders();
+		END IF;
+		
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER CARDINALITY(Environment.Variables.Msgs.Msg[]);
+		DECLARE ch CHARACTER 'out';
+		WHILE I<=J DO
+			SET OutputRoot.BLOB.BLOB = CAST(Environment.Variables.Msgs.Msg[I].Text AS BLOB CCSID 1208);
+			SET Environment.Variables.FileName = Environment.Variables.Msgs.Msg[I].FileName;
+			SET I = I+1;
+			PROPAGATE TO TERMINAL outTerminal DELETE NONE;
+		END WHILE;
+		RETURN FALSE;
+	END;
+	CREATE PROCEDURE  setMQHeaders( )
+	BEGIN
+		SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName = Environment.Variables.FlowIn;
+		SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueManagerName = Environment.Variables.QmName;
+		SET OutputLocalEnvironment.MQ.GET.QueueName = Environment.Variables.FlowOut;
+
+		SET OutputRoot.MQMD.Encoding = 546;
+		SET OutputRoot.MQMD.CodedCharSetId = 1208;
+		SET OutputRoot.MQMD.Format = 'MQSTR';
+		SET OutputRoot.MQMD.MsgId = CAST(Environment.Variables.CorrId AS BLOB CCSID 1208);
+		SET OutputRoot.MQMD.CorrelId = CAST(Environment.Variables.CorrId AS BLOB CCSID 1208);
+	END;
+	CREATE PROCEDURE setHTTPHeades ( )
+	BEGIN
+		SET OutputLocalEnvironment.Destination.HTTP.RequestURL = Environment.Variables.FlowIn;
+		SET OutputLocalEnvironment.Destination.HTTP.Timeout = CAST(Environment.Variables.Latency AS INTEGER);
+	END;
+	CREATE PROCEDURE setFileHeaders ( )
+	BEGIN
+		
+	END;
+END MODULE;
+
+
+
+
+CREATE COMPUTE MODULE AutoTest_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.MQMD.CorrelId = CAST(Environment.Variables.CorrId AS BLOB CCSID 1208);
+		SET OutputLocalEnvironment.MQ.GET.QueueName = Environment.Variables.FlowOut;
+		SET OutputLocalEnvironment.MQ.GET.MQGMO.WaitInterval = CAST(Environment.Variables.Latency AS INTEGER)*1000;
+		RETURN TRUE;
+	END;
+END MODULE;
+
+
+
+CREATE COMPUTE MODULE AutoTest_MF_SetEnv
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+--		SET Environment.In = NULL;
+		SET OutputRoot.HTTPInputHeader = NULL;
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER CARDINALITY(Environment.In.JSON.Data.Flows.Item[]);
+		WHILE I<=J DO
+			SET Environment.Variables.Msgs = NULL;
+			SET Environment.Variables.FlowType = Environment.In.JSON.Data.Flows.Item[I].FlowType;
+			SET Environment.Variables.FlowIn = Environment.In.JSON.Data.Flows.Item[I].FlowIn;
+			SET Environment.Variables.FlowOut = Environment.In.JSON.Data.Flows.Item[I].FlowOut;
+			SET Environment.Variables.QmName = Environment.In.JSON.Data.Flows.Item[I].QmName;
+			SET Environment.Variables.FlowName = Environment.In.JSON.Data.Flows.Item[I].FlowName;
+			SET Environment.Variables.Latency = Environment.In.JSON.Data.Flows.Item[I].Latency;
+			SET I = I+1;
+			PROPAGATE TO TERMINAL 'out' DELETE NONE;
+		END WHILE;
+		RETURN FALSE;
+	END;
+END MODULE;
