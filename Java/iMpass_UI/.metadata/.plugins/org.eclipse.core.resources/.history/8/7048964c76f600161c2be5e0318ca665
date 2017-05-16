@@ -1,0 +1,210 @@
+<!--<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Home</title>
+</head>
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/collapse.css" media="screen">
+<body>
+<div id="outer">
+<div id="header2"><a href=<%=session.getAttribute("home")!=null?session.getAttribute("home").toString():"" %>><img src="home.png" height="40" width="40" alt="Home"></img>  iMPAS : IBM Messaging Platform Access Simplified</a></div>
+<div id="logout"><table><tr><td>Welcome <%=session.getAttribute("username") %></td><td><a href="Logout.jsp"><img src="logg.jpg" height="25" width="25" alt="Log Out"></img></a></td></tr></table></div>
+</div>
+<div id="left">
+<table id="formTable1" align="center"><tr><td>
+<a href="QueueBrowser.jsp">Check the queue Properties</a>
+</td></tr><tr><td>
+<a href="ChannelBrowser.jsp">Monitor Channel Status</a>
+</td></tr><tr><td>
+<a href="TopicBrowser.jsp">Check Topic Properties</a>
+</td></tr><tr><td>
+<a href="Welcome.jsp">Monitor the broker application status</a>
+</td></tr>
+</table>
+</div>
+</body>
+</html>-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>iMPAS</title>
+<link rel="shortcut icon" href="/PharmaAssist/img/rx-logo-hi.ico"></link>
+<link href="default.css" rel="stylesheet" type="text/css" />
+<link href="fonts.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+function display_c(){
+	var refresh=1000; // Refresh rate in milli seconds
+	setTimeout('display_ct()',refresh)
+	}
+
+function display_ct() {
+	var strcount;
+	var x = new Date();
+	var hour=x.getHours();
+
+	if(hour>=0 && hour<12)
+	document.getElementById('time').innerHTML = hour + ":"+ x.getMinutes() + ":" +x.getSeconds() + " am     ";
+	
+	else if(hour==12)
+		document.getElementById('time').innerHTML = hour + ":"+ x.getMinutes() + ":" +x.getSeconds() + " pm     ";
+	else
+	document.getElementById('time').innerHTML = (hour-12) + ":"+ x.getMinutes() + ":" +x.getSeconds() + " pm     ";	
+	
+	document.getElementById('date').innerHTML = x.getDate() + "-"+ (x.getMonth()+1) + "-" +x.getFullYear() ;
+	display_c();
+	 }
+	
+
+function validate()
+{
+	var name=document.getElementById("username").value;
+	var pass=document.getElementById("password").value;
+	
+	if(pass.length==0)
+		document.getElementById("span_pass").innerHTML="Password is Compulsory";
+	
+	else if(pass.length < 8)
+		document.getElementById("span_pass").innerHTML="Password is Length less than 8 !";
+	
+	else if(pass.length >16)
+		document.getElementById("span_pass").innerHTML="Password Length exceeds 16 !";
+	 
+	if(name.length==0)
+		document.getElementById("span_name").innerHTML="Username is Compulsory";
+
+	
+		
+}
+
+
+function clean()
+{
+		document.getElementById("span_name").innerHTML="";
+		document.getElementById("span_pass").innerHTML="";
+		document.getElementById("username").value="";
+		document.getElementById("password").value="";
+		
+}
+
+function load()
+{
+		document.getElementById("about").innerHTML="You can learn more here................!!!!!:-)";
+		document.getElementById("open").innerHTML="";		
+		document.getElementById("close").innerHTML="...hide";
+		
+}
+
+function unload()
+{
+		document.getElementById("about").innerHTML="";
+		document.getElementById("open").innerHTML="...learn more";		
+		document.getElementById("close").innerHTML="";
+		
+}
+</script>
+</head>
+<body onload="display_ct();">
+<%if(session.getAttribute("username")== null){
+	response.sendRedirect("Login.jsp");
+	}
+%>
+<div id="wrapper">
+	<div id="menu-wrapper">
+		
+		<table>
+		<tr>
+		<td>
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1><a href="<%=session.getAttribute("home")!=null?session.getAttribute("home").toString():"" %>">iMPAS</a></h1>
+				
+			</div>
+		</div>
+	</div>
+	</td>
+		<td>
+		<div id="menu" class="container">
+			<ul>
+				<li class="current_page_item"><a href="welcome.jsp">Welcome Page</a></li>
+				<li><a href="contact.jsp">Contact</a></li>
+			</ul>
+		</div>
+		
+	
+	</td>
+	
+	<td>
+	<table width="100%">
+	<tr>
+	<td align="center"><a href="Logout.jsp"><img src="<%= request.getContextPath()%>/img/logout-1.png" height="40" width="40" alt="Add New Batch"></img></a>
+	<tr>
+	<td align="center"><font color=white>Logout</font>
+	</table>
+	</td>
+	</tr>
+	
+	</table>
+	
+	</div>
+	
+<div class="banner" id="banner">
+
+<div style="height:75%;" id="out_wel">
+<div id="in_wel" style="text-align:=center;">
+<table align="center" width="100%">
+<tr>
+<td align="center" width="200px">
+</td>
+</tr>
+</table>
+<br></br>
+<br></br>
+<table width="130%">
+<tr><td width="25%" align="center"><a href="QueueBrowser.jsp"><img src="<%= request.getContextPath()%>/img/que.png" height="100" width="100" alt="Add New Batch"></img></a>
+<td width="25%" align="center"><a href="ChannelBrowser.jsp"><img src="<%= request.getContextPath()%>/img/chl.png" height="100" width="100" alt="Search Batch"></img></a>
+<td width="25%" align="center"><a href="TopicBrowser.jsp"><img src="<%= request.getContextPath()%>/img/topic.png" height="100" width="100" alt="Delete Batch"></img></a>
+<td width="25%" align="center"><a href="Welcome.jsp"><img src="<%= request.getContextPath()%>/img/server.png" height="100" width="100" alt="Logout"></img></a>
+</table>
+<table width="130%">
+<tr>
+<td width="25%" align="center">Queue Status
+<td width="25%" align="center">Channel Status
+<td width="25%" align="center">Topic Status
+<td width="25%" align="center">Broker Status
+</table>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div id="copyright" class="container">
+<div style="height:75%;" id="out_copy">
+<div id="in_copy" style="text-align:=center;">
+	<table>
+	<tr>
+	<td>
+	&copy;copyright cognizant 2011-2020
+	<td>
+	<img src="<%= request.getContextPath()%>/img/cognizant.png" height="50" width="60" alt="Add New Batch"></img>
+	<tr>
+	<td>
+	<span id="time"></span><span id="date"></span>
+	</table>
+	
+</div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+package com.cts.dnb.Controller;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.log4j.Logger;
+
+import com.cts.testing.TestRun;
+
+
+public class ReadMessage extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Logger logger = Logger.getLogger(AddUser.class);
+		HttpSession session = request.getSession(true);
+		if(session.isNew()||!(boolean)session.getAttribute("isAdmin")){
+			response.sendRedirect("Login.jsp");
+		}else{	
+			ArrayList<String> msgs = new ArrayList<String>();
+			logger.debug("User "+session.getAttribute("username")+" read messages from queue "+session.getAttribute("qName")+".");
+			session.setAttribute("GtCount",0);
+			int flag = 0;
+			if(request.getParameter("GMO").equals("First")){
+				flag = 1;
+			}else if(request.getParameter("GMO").equals("Multiple")){
+				flag = Integer.parseInt((String)request.getParameter("msgNum"));
+			}else if(request.getParameter("GMO").equals("All")){
+				flag = -1;
+			}
+			System.out.println(flag);
+			try {
+				msgs = TestRun.GetMessage((String)session.getAttribute("qmName"),(String)session.getAttribute("qName"),flag);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if(msgs!=null){
+				session.setAttribute("GtMsgs",msgs);
+				response.sendRedirect("ReadMessages.jsp");
+			}else{
+				session.setAttribute("error", "MQRC 2033: Queue is empty");
+				response.sendRedirect("Error.jsp");
+			}
+		}
+	}
+
+}

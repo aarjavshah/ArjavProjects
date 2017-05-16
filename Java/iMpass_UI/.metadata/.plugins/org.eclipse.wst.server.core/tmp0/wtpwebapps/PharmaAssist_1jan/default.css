@@ -1,0 +1,528 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #16a085;
+	font-family: 'Raleway', sans-serif;
+	font-size: 11pt;
+	font-weight: 400;
+	color: #363636;
+}
+
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+p, ol, ul {
+	margin-top: 0px;
+}
+
+p {
+	line-height: 190%;
+}
+
+strong {
+}
+
+a {
+	color: #171717;
+}
+
+
+
+
+/*********************************************************************************/
+/* Cogni Image                                                                  */
+/*********************************************************************************/
+.test {
+    position: relative;
+}
+
+.test .foregroundImage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  left: 0;
+  right: 0;
+  width: auto;
+  background-image:url('C:\Users\Public\Pictures\Sample Pictures\Desert.jpg');
+  background-repeat:repeat;
+}
+
+
+
+/*********************************************************************************/
+/* Vertical_Index                                                                  */
+/*********************************************************************************/
+#out_index { position:relative }
+#in_index { position:absolute; left:50%;top:50%; height:10em; margin-top:-5em;margin-left: 20em; }
+
+
+/*********************************************************************************/
+/* Vertical_Copy                                                                  */
+/*********************************************************************************/
+#out_re { position:relative }
+#in_re { position:absolute; left:50%;top:50%; height:10em; margin-top:-25em;margin-left: -9em; }
+
+/*********************************************************************************/
+/* Vertical_Copy                                                                  */
+/*********************************************************************************/
+#out_re1 { position:relative }
+#in_re1 { position:absolute; left:50%;top:50%; height:1em; margin-top:-5em;margin-left: -12em; }
+
+
+/*********************************************************************************/
+/* Vertical_About                                                                  */
+/*********************************************************************************/
+#out_about { position:relative }
+#in_about { position:absolute; left:50%;top:50%; height:10em; margin-top:-1em;margin-left: -8em; }
+
+/*********************************************************************************/
+/* Vertical_Contact                                                                  */
+/*********************************************************************************/
+#out_contact { position:relative }
+#in_contact { position:absolute; left:50%;top:50%; height:10em; margin-top:8em;margin-left: -25em; }
+
+/*********************************************************************************/
+/* Vertical_Copyright                                                                  */
+/*********************************************************************************/
+#out_copy { position:relative }
+#in_copy { position:absolute; left:50%;top:50%; height:10em; margin-top:-4em;margin-left: -11em; }
+
+/*********************************************************************************/
+/* Horizontal_Welcome.jsp                                                                  */
+/*********************************************************************************/
+#out_wel { position:relative }
+#in_wel { position:absolute; left:50%;top:50%; height:10em; margin-top:-6em;margin-left: -17.5em; }
+
+/*********************************************************************************/
+/* Horizontal_AddBatch.jsp                                                                  */
+/*********************************************************************************/
+#out_add { position:relative }
+#in_add { position:absolute; left:50%;top:50%; height:10em; margin-top:-5em;margin-left: -10em; }
+
+
+/*********************************************************************************/
+/* Horizontal_SearchBatch.jsp                                                                  */
+/*********************************************************************************/
+#out_search { position:relative }
+#in_search { position:absolute; left:50%;top:50%; height:10em; margin-top:8em;margin-left: -8.5em; }
+
+/*********************************************************************************/
+/* Horizontal_DeleteBatch.jsp                                                                  */
+/*********************************************************************************/
+#out_delete { position:relative }
+#in_delete { position:absolute; left:50%;top:50%; height:10em; margin-top:8em;margin-left: -8.5em; }
+
+
+/*********************************************************************************/
+/* Horizontal_updateBatch.jsp                                                                  */
+/*********************************************************************************/
+#out_update { position:relative }
+#in_update { position:absolute; left:50%;top:50%; height:10em; margin-top:-3em;margin-left: -12em; }
+
+
+/*********************************************************************************/
+/* About_Information                                                                  */
+/*********************************************************************************/
+#define {
+    background-color: white;
+    width: 400px;
+    padding: 15px;
+    border: 12px solid #16a085;
+    margin: 20px;
+    height: 250px;
+}
+
+#define_log {
+    background-color: white;
+    width: 310px;
+    padding: 15px;
+    border: 12px solid #16a085;
+    margin: 0px;
+    height: 90px;
+}
+/*********************************************************************************/
+/* Cognizant_Image                                                                  */
+/*********************************************************************************/
+
+/*********************************************************************************/
+/* Contact_Information                                                                  */
+/*********************************************************************************/
+#middle
+{
+	
+}
+#define_contact {
+    background-color: white;
+    width: 150px;
+    padding: 15px;
+    border: 10px solid #16a085;
+    margin-top: 30px;
+    margin-left: 25px;
+    height: 50px;
+}
+
+
+#define_contact_fenil {
+    background-color: white;
+    width: 185px;
+    padding: 15px;
+    border: 10px solid #16a085;
+    margin-top: 30px;
+    margin-left: 25px;
+    height: 50px;
+}
+
+#define_contact_shivang {
+    background-color: white;
+    width: 180px;
+    padding: 15px;
+    border: 10px solid #16a085;
+    margin-top: 30px;
+    margin-left: 25px;
+    height: 50px;
+}
+/*********************************************************************************/
+/* List Styles                                                                   */
+/*********************************************************************************/
+
+	ul.style1
+	{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	ul.style1 li
+	{
+		border-top: solid 1px #E5E5E5;
+		padding: 0.80em 0;
+	}
+	
+	ul.style1 li:first-child
+	{
+		border-top: 0;
+		padding-top: 0;
+	}
+
+	ul.style2
+	{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	ul.style2 li
+	{
+		border-top: solid 1px #E5E5E5;
+		padding: 0.80em 0;
+	}
+	
+	ul.style2 li:first-child
+	{
+		border-top: 0;
+		padding-top: 0;
+	}
+
+/*********************************************************************************/
+/* Social Icon Styles                                                            */
+/*********************************************************************************/
+
+	ul.contact
+	{
+		margin: 0;
+		padding: 1.5em 0em 2.5em 0em;
+		list-style: none;
+	}
+	
+	ul.contact li
+	{
+		display: inline-block;
+		padding: 0em 0.30em;
+		font-size: 1em;
+	}
+	
+	ul.contact li span
+	{
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	ul.contact li a
+	{
+		color: #FFF;
+	}
+	
+	ul.contact li a:before
+	{
+		display: inline-block;
+		background: #3f3f3f;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: #FFFFFF;
+	}
+	
+	
+
+
+/*********************************************************************************/
+/* Heading Titles                                                                */
+/*********************************************************************************/
+
+	.title
+	{
+		margin-bottom: 2em;
+		text-transform: uppercase;
+	}
+
+	.title h2
+	{
+		font-weight: 400;
+		font-size: 2em;
+		color: #16a085;
+	}
+	
+	.title .byline
+	{
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 0.90em;
+		color: #6F6F6F;
+	}
+
+/** WRAPPER */
+
+#wrapper {
+	background: #FFFFFF url(images/bg01.png) repeat;
+}
+
+#footer-wrapper
+{
+	background: #0F0F0F;
+}
+
+.container {
+	width: 600px;
+	margin: 0px auto;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.image_cogni
+{
+ background: url(images/cogni.jpg) no-repeat center;
+ background-size:cover;
+}
+
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+#header-wrapper
+{
+	overflow: hidden;
+	background: url(images/bg01.png) repeat;
+	background-size: 90%;
+	padding: 4em 0em 1em 0em;
+	background: #333333;
+}
+
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header 
+	{
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+	}
+
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+
+	#logo 
+	{
+		width: 500px;
+		height: 100px;
+		margin: 0 auto;
+		padding: 0em 0em;
+		text-transform: none;
+	}
+	
+	#logo h1
+	{
+		letter-spacing: 0.10em;
+		font-size: 3em;
+	}
+	
+	#logo p 
+	{
+		letter-spacing: 0.10em;
+		color: #FFF;
+	}
+	
+	#logo a 
+	{
+		text-decoration: none;
+		color: #FFF;
+	}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner 
+	{
+		overflow: hidden;
+		height: 380px;
+		background: url(images/pic01.jpg) no-repeat center;
+		background-size: cover;
+	}
+	
+	#banner #image
+	{
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  height: auto;
+	  left: 0;
+	  right: 0;
+	  width: auto;
+	  background-image:url('C:\Users\Public\Pictures\Sample Pictures\Desert.jpg');
+	  background-repeat:repeat;
+	}
+	
+
+/** MENU */
+
+#menu-wrapper
+{
+	background: #333333;
+}
+
+#menu {
+	overflow: hidden;
+	height: 100px;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+	text-align: center;
+}
+
+#menu li {
+	display: inline-block;
+}
+
+#menu a {
+	display: block;
+	letter-spacing: 1px;
+	padding: 0px 20px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.80em;
+	line-height: 100px;
+	border: none;
+	color: #FFF;
+}
+
+#menu a:hover, #menu .current_page_item a {
+	text-decoration: none;
+}
+
+#menu .current_page_item a {
+	background: #1abc9c;
+}
+
+/** PAGE */
+
+#page
+{
+	position: relative;
+	overflow: hidden;
+	padding: 6em 0em 5em 0em;
+}
+
+
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+	#copyright
+	{
+		overflow: hidden;
+		padding: 3.5em 0em;
+		text-align: center;
+	}
+	
+	#copyright p
+	{
+		letter-spacing: 0.20em;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1em;
+		color: rgba(255,255,255,.5);
+	}
+	
+	#copyright table
+	{
+		letter-spacing: 0.20em;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1em;
+		color: rgba(255,255,255,.5);
+	}
+	#copyright a
+	{
+		text-decoration: none;
+		color: rgba(255,255,255,0.8);
+	}
+
+
+/*********************************************************************************/
+/* Button Style                                                                  */
+/*********************************************************************************/
+
+	.button
+	{
+		display: inline-block;
+		margin-top: 1.5em;
+		padding: 1.50em 3em 1.50em 3em;
+		background: #16a085;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 0.90em;
+		color: #FFF;
+	}
+	
+		.button:before
+		{
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			border-radius: 20px;
+			text-align: center;
+			color: #FFF;
+		}

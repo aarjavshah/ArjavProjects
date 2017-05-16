@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.example.org/Brokers" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.example.org/Brokers">
+
+    <xsd:element name="Brokers" type="Brokers_TYP"></xsd:element>
+
+    <xsd:element name="Broker" type="Broker_TYP"></xsd:element>
+
+    <xsd:element name="ExecutionGroup" type="ExecutionGroup_TYP"></xsd:element>
+
+    <xsd:element name="ExecutionGroups" type="ExecutionGroups_TYP"></xsd:element>
+
+    <xsd:element name="Applications" type="Applications_TYP"></xsd:element>
+
+    <xsd:element name="Application" type="Application_TYP"></xsd:element>
+
+
+
+    <xsd:element name="BrokerName" type="xsd:string"></xsd:element>
+
+    <xsd:element name="isBrokerRunning" type="xsd:boolean"></xsd:element>
+
+    <xsd:element name="ExecutionGroupName" type="xsd:string"></xsd:element>
+
+    <xsd:element name="isExecutionGroupRunning" type="xsd:boolean"></xsd:element>
+
+    <xsd:element name="ApplicationName" type="xsd:string"></xsd:element>
+
+    <xsd:element name="isApplicationRunning" type="xsd:boolean"></xsd:element>
+
+	
+	<xsd:element name="ApplicationDeployedOn" type="xsd:string"></xsd:element>
+
+
+
+    <xsd:complexType name="Brokers_TYP">
+    	<xsd:sequence>
+    		<xsd:element ref="Broker" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="Broker_TYP">
+    	<xsd:sequence>
+    		<xsd:element ref="BrokerName"></xsd:element>
+    		<xsd:element ref="isBrokerRunning"></xsd:element>
+            <xsd:element ref="EnvironmentAlias"></xsd:element>
+            <xsd:element ref="ExecutionGroups" maxOccurs="1"
+    			minOccurs="1">
+    		</xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="Applications_TYP">
+    	<xsd:sequence>
+    		<xsd:element ref="Application" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="Application_TYP">
+    	<xsd:sequence>
+    		<xsd:element ref="ApplicationName"></xsd:element>
+    		<xsd:element ref="isApplicationRunning"></xsd:element>
+    		<xsd:element ref="ApplicationDeployedOn"></xsd:element>
+    		<xsd:element ref="MessageFlows" maxOccurs="1" minOccurs="1"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ExecutionGroups_TYP">
+    	<xsd:sequence>
+    		<xsd:element ref="ExecutionGroup" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ExecutionGroup_TYP">
+    	<xsd:sequence>
+    		<xsd:element ref="ExecutionGroupName"></xsd:element>
+    		<xsd:element ref="isExecutionGroupRunning"></xsd:element>
+    		<xsd:element ref="Applications" maxOccurs="1" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+
+
+
+
+
+
+    <xsd:element name="MessageFlows" type="MessageFlows_TYP"></xsd:element>
+    
+    <xsd:complexType name="MessageFlows_TYP">
+    	<xsd:sequence>
+    		<xsd:element ref="MessageFlow" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:element name="MessageFlow" type="MessageFlow_TYP"></xsd:element>
+
+    <xsd:element name="MessageFlowVersion" type="xsd:string"></xsd:element>
+
+    <xsd:complexType name="MessageFlow_TYP">
+    	<xsd:sequence>
+    		<xsd:element ref="MessageFlowName"></xsd:element>
+    		<xsd:element ref="MessageFlowVersion"></xsd:element>
+    		<xsd:element ref="isMessageFlowRunning"></xsd:element>
+    		<xsd:element ref="MessageFlowInstances"></xsd:element>
+    		<xsd:element ref="Queues" maxOccurs="1" minOccurs="1"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="MessageFlowName" type="xsd:string"></xsd:element>
+
+    <xsd:element name="EnvironmentAlias" type="xsd:string"></xsd:element>
+
+    <xsd:element name="isMessageFlowRunning" type="xsd:boolean"></xsd:element>
+
+
+    <xsd:element name="MessageFlowInstances" type="xsd:int"></xsd:element>
+
+    <xsd:element name="Queue" type="xsd:string"></xsd:element>
+
+    <xsd:complexType name="Queues_TYP">
+    	<xsd:sequence>
+    		<xsd:element ref="Queue" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:element name="Queues" type="Queues_TYP"></xsd:element>
+</xsd:schema>

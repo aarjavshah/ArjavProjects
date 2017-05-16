@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function myFunction(){
+    var x = document.getElementById("myFile");
+    var txt = "";
+    if ('files' in x) {
+        if (x.files.length == 0) {
+            txt = "Select one or more files.";
+        } else {
+            for (var i = 0; i < x.files.length; i++) {
+                txt += (i+1) + ". file";
+                var file = x.files[i];
+                if ('name' in file) {
+                    txt += "name: " + file.name + "";
+                }
+                if ('size' in file) {
+                    txt += "size: " + file.size + " bytes ";
+                }
+            }
+        }
+    } 
+    else {
+        if (x.value == "") {
+            txt += "Select one or more files.";
+        } else {
+            txt += "The files property is not supported by your browser!";
+            txt  += "The path of the selected file: " + x.value; // If the browser does not support the files property, it will return the path of the selected file instead. 
+        }
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+</head>
+<body>
+<p>
+<form>
+Please specify a file, or a set of files:<br>
+<input type="file" id="myFile" multiple size="50" onchange="myFunction()">
+</p>
+
+<textarea id="demo" style="width:400px;height:150px;"></textarea>
+</form>
+</body>
+</html>

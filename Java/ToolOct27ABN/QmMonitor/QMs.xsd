@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/QMs" xmlns:tns="http://www.example.org/QMs" elementFormDefault="qualified">
+
+
+    <element name="QueueManagers" type="tns:QueueManagers"></element>
+    
+
+    <element name="QueueManager" type="tns:QueueManager"></element>
+    
+    <element name="ConnectConfig" type="tns:ConnectConfig"></element>
+    
+    <element name="QMname" type="string"></element>
+
+    <element name="QMhost" type="string"></element>
+
+    <element name="QMport" type="string"></element>
+
+    <element name="QMchannel" type="string"></element>
+
+    <element name="QMusername" type="string"></element>
+
+    <element name="QMpassword" type="string"></element>
+
+    <element name="queues" type="tns:queues"></element>
+    
+    <element name="queue" type="string"></element>
+
+
+    <complexType name="QueueManagers">
+    	<sequence>
+    		<element ref="tns:QueueManager" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="QueueManager">
+    	<sequence>
+    		<element ref="tns:environment"></element>
+    		<element ref="tns:ConnectConfig"></element>
+    		<element ref="tns:queues"></element>
+    		<element ref="tns:Channels"></element>
+    		<element ref="tns:topics"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="ConnectConfig">
+    	<sequence>
+    		<element ref="tns:QMname"></element>
+    		<element ref="tns:QMhost"></element>
+    		<element ref="tns:QMport"></element>
+    		<element ref="tns:QMchannel"></element>
+    		<element ref="tns:QMusername"></element>
+    		<element ref="tns:QMpassword"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="queues">
+    	<sequence>
+    		<element ref="tns:queue" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="environment" type="string"></element>
+
+    <complexType name="channels">
+    	<sequence>
+    		<element ref="tns:Channel" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="Channels" type="tns:channels"></element>
+
+    <element name="Channel" type="string"></element>
+
+    <complexType name="topics">
+    	<sequence>
+    		<element ref="tns:topic" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="topics" type="tns:topics"></element>
+
+    <element name="topic" type="string"></element>
+</schema>

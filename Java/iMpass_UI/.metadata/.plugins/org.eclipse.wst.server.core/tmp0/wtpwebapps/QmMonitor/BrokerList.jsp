@@ -1,0 +1,182 @@
+<%@page import="com.cts.dnb.Controller.Login"%>
+<%@page import="org.apache.log4j.Logger"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.cts.dnb.Application1.*"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>iMPAS : BrokerList</title>
+</head>
+<script type="text/javascript">
+function reDirect()
+{
+window.location="AdminServices.jsp";		
+}function display_c(){
+	var refresh=1000; // Refresh rate in milli seconds
+	setTimeout('display_ct()',refresh)
+	}
+
+function display_ct() {
+	var strcount;
+	var x = new Date();
+	var hour=x.getHours();
+
+	if(hour>=0 && hour<12)
+	document.getElementById('time').innerHTML = hour + ":"+ x.getMinutes() + ":" +x.getSeconds() + " am     ";
+	
+	else if(hour==12)
+		document.getElementById('time').innerHTML = hour + ":"+ x.getMinutes() + ":" +x.getSeconds() + " pm     ";
+	else
+	document.getElementById('time').innerHTML = (hour-12) + ":"+ x.getMinutes() + ":" +x.getSeconds() + " pm     ";	
+	
+	document.getElementById('date').innerHTML = x.getDate() + "-"+ (x.getMonth()+1) + "-" +x.getFullYear() ;
+	display_c();
+	 }
+function load()
+{
+		document.getElementById("about").innerHTML=
+			" You can also edit the connection parameters."+
+			" Be cautious while editing the connection parameters. These are used by the tool to connect to the broker."+
+			" Entering the wrong parameters can lead to issues in the tool."+
+			" <br><br><strong>#This does not alter any properties of the broker on the server, but it changes connection information of the broker for the tool.<strong> ";
+		document.getElementById("open").innerHTML="";		
+		document.getElementById("close").innerHTML="...hide";
+		
+}
+
+function unload()
+{
+		document.getElementById("about").innerHTML="";
+		document.getElementById("open").innerHTML="...learn more";		
+		document.getElementById("close").innerHTML="";
+		
+}
+</script>
+
+<link href="default.css" rel="stylesheet" type="text/css" />
+<link href="fonts.css" rel="stylesheet" type="text/css" />
+<body style="overflow: hidden" onload=display_ct();>
+
+<%if(session.getAttribute("isAdmin")==null ){
+response.sendRedirect("Login.jsp");}
+else if(!(Boolean)session.getAttribute("isAdmin")){
+	if(session.getAttribute("username")==null){
+		response.sendRedirect("Login.jsp");	
+	}else{
+		response.sendRedirect("Home.jsp");
+	}
+	
+}	
+Logger logger = Logger.getLogger(Login.class);
+logger.debug("admin "+session.getAttribute("username")+" loaded the Broker Configuration List");
+%>
+<div id="wrapper">
+	<div id="menu-wrapper">
+		
+		<table>
+		<tr>
+		<td>
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1><a href="<%=session.getAttribute("home")!=null?session.getAttribute("home").toString():"" %>">iMPAS</a></h1>
+			</div>
+		</div>
+	</div>
+	</td>
+		<td>
+		<div id="menu" class="container">
+			<ul>
+				<li class="current_page_item"><a href="<%=session.getAttribute("home")!=null?session.getAttribute("home").toString():"" %>">Welcome Page</a></li>
+				<li><a href="contact.jsp">Contact</a></li>
+			</ul>
+		</div>
+		
+	
+	</td>
+	<td>
+	<table width="100%">
+	<tr>
+	<td align="center"><a href="Logout.jsp"><img src="<%= request.getContextPath()%>/img/logout-1.png" height="40" width="40" alt="logout"></img></a>
+	<tr>
+	<td align="center"><font color=white>Logout <%=session.getAttribute("username") %></font>
+	</table>
+	</td>
+	</tr>
+	
+	</tr>
+	</table>
+	
+	</div>
+	
+<div id="banner1">
+
+<div style="height:0%;" id="out_search">
+<div id="in_search" style="text-align:=center;">
+<table ><tr><td width="550px">
+<table><tr><td align="center">
+<h1>Existing Broker List<sup>#</sup></h1></td></tr><tr><td> </td></tr><tr><td> </td></tr>
+</table>
+<table id="formTable"><tr><td>
+<h2>Brokers</h2>
+<ol class="tree">
+
+<%for(BrokerDetailsVO b :BrokerXML.RetrieveDetailedbrokerList()){%>
+	<div id="textbox"><li>
+	<label for="<%=b.getBrokerName() %>"><%=b.getBrokerName() %></label>
+	<input type="checkbox" id="<%=b.getBrokerName()%>"> 
+	<ol>
+	<li class="file"><a href="#">Environment Name : <%=b.getAlias() %></a></li>
+	<li class="file"><a href="#">Queue Manager Name : <%=b.getQueueManagerName()%></a></li>
+	<li class="file"><a href="#">Host IP : <%=b.getHost() %></a></li>
+	<li class="file"><a href="#">Port Number : <%=b.getPort() %></a></li>
+	<li class="file"><a href="#"><form action="EditBroker" method="post"><input type="hidden" name="brokerName" value="<%=b.getBrokerName()%>"/><input type="submit" id="edit" name="Edit" value="Edit"></form></a></li>
+	</ol></li>
+<%}%>
+</div>
+</ol>
+<input type=button name=back value="Go Back" onclick="reDirect()">
+
+</table>
+</td><td>
+<div id="define">
+<p >Brokers and it's connection information can be viewed from here.<span id="about"></span>
+<a href="javascript:load()" id="open">...learn more</a>
+<a href="javascript:unload()" id="close"></a>
+</br>
+</p>
+</div></td></tr></table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div id="copyright" class="container">
+<div style="height:75%;" id="out_copy">
+<div id="in_copy" style="text-align:=center;">
+	<table>
+	<tr>
+	<td>
+	&copy;copyright cognizant 2011-2020
+	<td>
+	<img src="<%= request.getContextPath()%>/img/cognizant.png" height="50" width="60" alt="Add New Batch"></img>
+	<tr>
+	<td>
+	<span id="time"></span><span id="date"></span>
+	</table>
+	
+</div>
+</div>
+</div>
+
+</body>
+</html>

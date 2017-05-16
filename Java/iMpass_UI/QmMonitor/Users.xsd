@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Users" xmlns:tns="http://www.example.org/Users" elementFormDefault="qualified">
+
+    <element name="UserName" type="string"></element>
+
+    <element name="UserType" type="string"></element>
+
+    <element name="Password" type="string"></element>
+
+    <complexType name="Users_TYP">
+    	<sequence>
+    		<element ref="tns:User" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="User_TYP">
+    	<sequence>
+    		<element ref="tns:UserName" maxOccurs="1" minOccurs="1"></element>
+    		<element ref="tns:UserType" maxOccurs="1" minOccurs="1"></element>
+    		<element ref="tns:Password" maxOccurs="1" minOccurs="0"></element>
+    		<element ref="tns:Email" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="Users" type="tns:Users_TYP"></element>
+
+    <element name="User" type="tns:User_TYP"></element>
+
+    <element name="Email" type="string"></element>
+</schema>

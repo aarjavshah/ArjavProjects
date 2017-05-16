@@ -1,0 +1,121 @@
+<%@page import="com.cts.dnb.AdminService.ManageRequests"%>
+<%@page import="com.cts.dnb.model5.RequestTYP"%>
+<%@page import="com.cts.dnb.Application1.UserJaxB"%>
+<%@page import="com.cts.dnb.Application1.BrokerXML"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>iMPAS : Track Request</title>
+</head>
+<script type="text/javascript">
+function ValidateRemoveBroker(){
+	var broker=document.getElementById("broker").value;
+	var flag=0;
+	if(broker=="Broker")
+	{	document.getElementById("span_broker").innerHTML="Select RequestID";
+		flag=1;
+	}
+	if(flag==0)
+		{
+		document.getElementById("removeBroker").disabled = true;
+		return true;		
+		}
+	else
+		{
+		return false;
+		}	
+}
+function reDirect()
+{
+window.location="AdminServices.jsp";		
+}
+</script>
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/collapse.css" media="screen">
+<body>
+<%if(session.getAttribute("isAdmin")==null ){
+response.sendRedirect("Login.jsp");}
+else if(!(Boolean)session.getAttribute("isAdmin")){
+	if(session.getAttribute("username")==null){
+		response.sendRedirect("Login.jsp");	
+	}else{
+		response.sendRedirect("Welcome.jsp");
+	}
+	
+}	%>
+<div id="wrapper">
+	<div id="menu-wrapper">
+		
+		<table>
+		<tr>
+		<td>
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1><a href="<%=session.getAttribute("home")!=null?session.getAttribute("home").toString():"" %>">iMPAS</a></h1>
+			</div>
+		</div>
+	</div>
+	</td>
+		<td>
+		<div id="menu" class="container">
+			<ul>
+				<li class="current_page_item"><a href="<%=session.getAttribute("home")!=null?session.getAttribute("home").toString():"" %>">Welcome Page</a></li>
+				<li><a href="contact.jsp">Contact</a></li>
+			</ul>
+		</div>
+		
+	
+	</td>
+	<td>
+	<table width="100%">
+	<tr>
+	<td align="center"><a href="Logout.jsp"><img src="<%= request.getContextPath()%>/img/logout-1.png" height="40" width="40" alt="logout"></img></a>
+	<tr>
+	<td align="center"><font color=white>Logout <%=session.getAttribute("username") %></font>
+	</table>
+	</td>
+	</tr>
+	
+	</tr>
+	</table>
+	
+	</div>
+	
+<div id="banner1">
+
+<div style="height:0%;" id="out_search">
+<div id="in_search" style="text-align:=center;">
+<table ><tr><td width = "550px">
+<table><tr><td align="center">
+<h1>Track the Request<sup>#</sup></h1></td></tr><tr><td> </td></tr><tr><td> </td></tr>
+</table>
+<table id="formTable">
+<form action="GetReq" method="post" onsubmit="return ValidateRemoveBroker()">
+<tr>
+<td>Request ID<font color="Red">*</font>:</td>
+<td><select name="reqID" id="broker">
+<option value="Broker">--RequestID--</option>
+<%
+for(RequestTYP req : ManageRequests.getReqRoot().getRequest()){
+%>
+
+	<option value=<%=req.getRequestID() %>><%=req.getRequestID() %></option>
+<%}
+%>
+</select>
+<td><font color=red><span id="span_broker"></span></font></td>
+</tr>
+</table>
+<table align="center">
+<tr>
+<td><input type="submit" name="getdetails" id="removeUser" value="Get Details"></td>
+<td><input type=button name=back value="Go Back" onclick="reDirect()"></td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

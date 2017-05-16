@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Requests" xmlns:tns="http://www.example.org/Requests" elementFormDefault="qualified">
+
+    <complexType name="Request_TYP">
+    	<sequence>
+    		<element ref="tns:RequestID" maxOccurs="1" minOccurs="1"></element>
+    		<element ref="tns:RequestType" maxOccurs="1" minOccurs="1"></element>
+    		<element ref="tns:RequestStatus" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="Request" type="tns:Request_TYP"></element>
+    
+    <element name="RequestID" type="string"></element>
+
+    <element name="RequestStatus" type="string"></element>
+
+    <element name="RequestType" type="string"></element>
+
+    <complexType name="Requests_TYP">
+    	<sequence>
+    		<element ref="tns:Request" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="Requests" type="tns:Requests_TYP"></element>
+</schema>

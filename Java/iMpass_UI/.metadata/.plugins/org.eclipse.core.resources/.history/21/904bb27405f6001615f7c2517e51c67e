@@ -1,0 +1,169 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>iMPAS Admin Home</title>
+<script type="text/javascript">
+function confimation(){
+	return confirm("This Will Start an automated update cycle!\nAre you sure?");
+}
+function display_c(){
+	var refresh=1000; // Refresh rate in milli seconds
+	setTimeout('display_ct()',refresh)
+	}
+
+function display_ct() {
+	var strcount;
+	var x = new Date();
+	var hour=x.getHours();
+
+	if(hour>=0 && hour<12)
+	document.getElementById('time').innerHTML = hour + ":"+ x.getMinutes() + ":" +x.getSeconds() + " am     ";
+	
+	else if(hour==12)
+		document.getElementById('time').innerHTML = hour + ":"+ x.getMinutes() + ":" +x.getSeconds() + " pm     ";
+	else
+	document.getElementById('time').innerHTML = (hour-12) + ":"+ x.getMinutes() + ":" +x.getSeconds() + " pm     ";	
+	
+	document.getElementById('date').innerHTML = x.getDate() + "-"+ (x.getMonth()+1) + "-" +x.getFullYear() ;
+	display_c();
+	 }
+	
+</script>
+</head>
+<link href="default.css" rel="stylesheet" type="text/css" />
+<link href="fonts.css" rel="stylesheet" type="text/css" />
+<body style="overflow: hidden" onload=display_ct();>
+<%if(session.getAttribute("isAdmin")==null ){
+response.sendRedirect("Login.jsp");}
+else if(!(Boolean)session.getAttribute("isAdmin")){
+	if(session.getAttribute("username")==null){
+		response.sendRedirect("Login.jsp");	
+	}else{
+		response.sendRedirect("Home.jsp");
+	}
+	
+}	%>
+<div id="wrapper">
+	<div id="menu-wrapper">
+		
+		<table>
+		<tr>
+		<td>
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1><a>iMPAS</a></h1>
+			</div>
+		</div>
+	</div>
+	</td>
+		<td>
+		<div id="menu" class="container">
+			<ul>
+				<li class="current_page_item"><a href="<%=session.getAttribute("home")!=null?session.getAttribute("home").toString():"" %>">Welcome Page</a></li>
+				<li><a href="contact.jsp">Contact</a></li>
+			</ul>
+		</div>
+		
+	
+	</td>
+	<td>
+	<table width="100%">
+	<tr>
+	<td align="center"><a href="Logout.jsp"><img src="<%= request.getContextPath()%>/img/logout-1.png" height="40" width="40" alt="Add New Batch"></img></a>
+	<tr>
+	<td align="center"><font color=white>Logout</font>
+	</table>
+	</td>
+	</tr>
+	
+	</tr>
+	</table>
+	
+	</div>
+	
+<div id="banner1">
+
+<div style="height:0%;" id="out_search">
+<div id="in_search" style="text-align:=center;">
+<table><tr><td align="center">
+<h1>iMPAS Administration Console<font color="RED">*</font></h1></td></tr><tr><td> </td></tr><tr><td> </td></tr>
+
+</table>
+
+<table id="formTable2"><tr><td>
+<ol class="tree1">
+	<li>
+		<label for="Broker Operation"> Broker Maintenance</label><input type="checkbox" id="Broker Operation">
+		<ol>
+			<li class="file"><a class="admin" href="AddBroker.jsp">Add Broker</a></li>
+			<li class="file"><a class="admin" href="RemoveBroker.jsp">Remove Broker</a></li>
+			<li class="file"><a class="admin" href="BrokerList.jsp">Retrieve Broker List</a></li>
+			<li class="file"><a class="admin" href="/QmMonitor1/BrokerUpdate" onclick="return confimation()">Retrieve Broker Components</a></li>
+		</ol>
+	</li>
+</ol>
+</td></tr><tr><td>
+<ol class="tree1">
+	<li>
+		<label for="Queue-Manager Operation"> Queue-Manager Maintenance</label><input type="checkbox" id="Queue-Manager Operation">
+		<ol>
+			<li class="file"><a class="admin" href="AddQManager.jsp">Add Queue-Manager</a></li>
+			<li class="file"><a class="admin" href="/QmMonitor1/QMSetup" onclick="return confimation()">Retrieve Queue-Manager Components</a></li>
+			
+		</ol>
+	</li>
+</ol>
+</td></tr><tr><td>
+<ol class="tree1">
+	<li>
+		<label for="User-Access Operation"> User Maintenance</label><input type="checkbox" id="User-Access Operation">
+		<ol>
+			<li class="file"><a class="admin" href="AddUser.jsp">Add User</a></li>
+			<li class="file"><a class="admin" href="RemoveUser.jsp">Remove User</a></li>
+			<li class="file"><a class="admin" href="UserList.jsp">Retrieve User</a></li>
+		</ol>
+	</li>
+</ol>
+</td></tr><tr><td><div class="conf">
+<a href="ConfigureProperties.jsp">Configure Properties</a></div></td></tr>
+<tr><td><div class="conf">
+<a href="TrackRequest.jsp">Track Request</a></div></td></tr>
+<tr><td><div class="conf">
+<a href="Home.jsp">User Home Page</a></div></td></tr>
+</table><br><br><br><br><br><br>
+* Administration console is for administration of the tool. Queue-Manager or Broker can not be administered from this console.
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div id="copyright" class="container">
+<div style="height:75%;" id="out_copy">
+<div id="in_copy" style="text-align:=center;">
+	<table>
+	<tr>
+	<td>
+	&copy;copyright cognizant 2011-2020
+	<td>
+	<img src="<%= request.getContextPath()%>/img/cognizant.png" height="50" width="60" alt="Add New Batch"></img>
+	<tr>
+	<td>
+	<span id="time"></span><span id="date"></span>
+	</table>
+	
+</div>
+</div>
+</div>
+
+</body>
+</html>

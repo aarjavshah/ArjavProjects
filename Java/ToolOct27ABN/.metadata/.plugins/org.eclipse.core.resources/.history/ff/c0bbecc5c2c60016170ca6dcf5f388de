@@ -1,0 +1,121 @@
+package com.cts.testing;
+
+import java.util.ArrayList;
+
+import com.cts.dnb.Application2.QMMonitor;
+import com.cts.dnb.Application2.QueueBrowser;
+import com.ibm.mq.MQC;
+import com.ibm.mq.MQEnvironment;
+import com.ibm.mq.MQGetMessageOptions;
+import com.ibm.mq.MQMessage;
+import com.ibm.mq.MQPutMessageOptions;
+import com.ibm.mq.MQQueue;
+import com.ibm.mq.MQQueueManager;
+import com.ibm.mq.constants.MQConstants;
+
+public class TestRun {
+
+	public static void main(String args[]){
+		//System.out.println(QMMonitor.getResponse("a^QN^QM1^localhost^1414^SYSTEM.DEF.SVRCONN^454582"));
+//		try {
+//			System.out.println(GetMessage("QM1", "QIN",2));
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+		System.out.println("ALL DONE");
+		
+	}
+	public static int samp() {
+		try{
+			System.out.println("1");
+			return 0;
+			System.out.println("2");
+		}catch(Exception e){
+			return 0;
+		}finally{
+			System.out.println("3");
+		}
+		
+	}
+	
+	public static ArrayList<String> BrowseMessage(String qmName,String qName) throws Exception{
+		ArrayList<String> msgs = new ArrayList<String>();
+		String msg = "";
+		MQQueueManager qmgr = QueueBrowser.getQueueManagerCon(QueueBrowser.setQueueManagerParams(qmName));
+		MQQueue queue = null;			
+		int openOptions = MQConstants.MQOO_FAIL_IF_QUIESCING | MQConstants.MQOO_INPUT_SHARED | MQConstants.MQOO_BROWSE |MQConstants.MQOO_INQUIRE;
+		queue =qmgr.accessQueue(qName,
+		                        openOptions,
+		                        null,           // default q manager
+		                        null,           // no dynamic q name
+		                        null);
+		if(queue.getCurrentDepth()>0){
+		MQMessage theOutMessage    = new MQMessage();
+		MQGetMessageOptions gmo = new MQGetMessageOptions();
+		int cnt =1;
+		while(cnt<=queue.getCurrentDepth()){
+		if(cnt==1){
+			gmo.options=MQConstants.MQGMO_WAIT | MQConstants.MQGMO_BROWSE_FIRST;
+		}else{
+	    	gmo.options=MQConstants.MQGMO_WAIT | MQConstants.MQGMO_BROWSE_NEXT;
+	    }cnt++;
+	    gmo.matchOptions=MQConstants.MQMO_NONE;
+	      queue.get(theOutMessage,gmo);
+	      int strLen = theOutMessage.getMessageLength();
+	      
+	      byte[] strData = new byte[strLen];
+	      theOutMessage.readFully(strData,0,strLen);
+	      msg = new String(strData);
+	   // System.out.println(msg); 
+	      msgs.add(msg.trim());
+		}
+	    queue.close();
+	    qmgr.disconnect();
+		
+		return msgs;}else{
+			return null;
+		}
+	}
+	
+	
+	
+	public static ArrayList<String> GetMessage(String qmName,String qName,int count) throws Exception{
+		ArrayList<String> msgs = new ArrayList<String>();
+		String msg = "";
+		MQQueueManager qmgr = QueueBrowser.getQueueManagerCon(QueueBrowser.setQueueManagerParams(qmName));
+		MQQueue queue = null;			
+		int openOptions = MQConstants.MQOO_FAIL_IF_QUIESCING | MQConstants.MQOO_INPUT_SHARED | MQConstants.MQOO_INQUIRE;
+		queue =qmgr.accessQueue(qName,
+		                        openOptions,
+		                        null,           // default q manager
+		                        null,           // no dynamic q name
+		                        null);
+		if(queue.getCurrentDepth()>0){
+			MQMessage theOutMessage    = new MQMessage();
+			MQGetMessageOptions gmo = new MQGetMessageOptions();
+			int cnt =queue.getCurrentDepth();
+			if(count==-1){
+				count = queue.getCurrentDepth();
+			}
+			while(queue.getCurrentDepth()>cnt-count){
+				gmo.options = MQConstants.MQGMO_NO_WAIT | MQConstants.MQGMO_ALL_MSGS_AVAILABLE;
+				gmo.matchOptions=MQConstants.MQMO_NONE;
+				queue.get(theOutMessage,gmo);
+				int strLen = theOutMessage.getMessageLength();
+				byte[] strData = new byte[strLen];
+				theOutMessage.readFully(strData,0,strLen);
+				msg = new String(strData);
+		   // System.out.println(msg); 
+				msgs.add(msg.trim());
+			}
+		    queue.close();
+		    qmgr.disconnect();
+			
+			return msgs;
+		}else{
+			return null;
+		}
+	}
+}
