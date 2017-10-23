@@ -6,8 +6,10 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/SonarTest/icons/full/obj16/IMS_Test.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/SonarTest/icons/full/obj30/IMS_Test.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmIMSRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="299,120" hostname="localhost" portNumber="970" dataStoreName="Local">
+      <nodes xmi:type="ComIbmIMSRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="299,120" useNodeProperties="false" hostname="localhost" portNumber="970" dataStoreName="Local" configurableService="XYZ" commitMode="commitThenSend" messageDomainProperty="XMLNSC">
         <translation xmi:type="utility:ConstantString" string="IMS Request"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Short Description"/>
+        <longDescription xmi:type="utility:ConstantString" string="Long Description goes here"/>
       </nodes>
       <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="115,133" queueName="IN">
         <translation xmi:type="utility:ConstantString" string="MQ Input"/>
