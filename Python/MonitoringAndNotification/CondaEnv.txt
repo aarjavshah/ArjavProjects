@@ -1,0 +1,1 @@
+C:\Miniconda2;C:\Miniconda2\Scripts;C:\Miniconda2\Library\bin
