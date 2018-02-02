@@ -15,13 +15,13 @@
       <nodes xmi:type="ComIbmValidate.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="366,83" domain="DFDL" checkDomain="true" type="{}:CSV24">
         <translation xmi:type="utility:ConstantString" string="Validate"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="256,82" computeExpression="esql://routine/#MF_CatellaSample_Compute.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="256,82" computeExpression="esql://routine/#MF_Sample_Compute.Main">
         <translation xmi:type="utility:ConstantString" string="GenerateOutput"/>
       </nodes>
       <nodes xmi:type="ErrorHandling_SF.subflow:FCMComposite_1" xmi:id="FCMComposite_1_5" location="180,164">
         <translation xmi:type="utility:ConstantString" string="ErrorHandling_SF"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="169,81" computeExpression="esql://routine/#MF_CatellaSample_Transform.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="169,81" computeExpression="esql://routine/#MF_Sample_Transform.Main">
         <translation xmi:type="utility:ConstantString" string="Transform"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
